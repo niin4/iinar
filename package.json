@@ -1,0 +1,26 @@
+{
+  "name": "saitti",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "cssnano": "^5.0.8",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.3.6",
+    "postcss-loader": "^6.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm-run-all --parallel watch:start watch:css",
+    "build": "parcel build src/index.html --no-minify",
+    "watch:start": "parcel src/index.html",
+    "watch:css": "windicss ./src/*.html -to src/windi.css --dev",
+    "build-netlify": "npx -p parcel-bundler parcel build src/index.html --no-minify"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}
